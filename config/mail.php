@@ -39,8 +39,8 @@ return [
             'host' => env('MAIL_HOST', 'smtp.gmail.com'),
             'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('perta.marco@gmail.com'),
-            'password' => env('15011997Mm!!'),
+            'username' => env('MAIL_USERNAME', 'perta.marco@gmail.com' ),
+            'password' => env('MAIL_PASSWORD', '15011997Mm!!' ),
         ],
 
         'ses' => [
@@ -75,7 +75,7 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'perta.marco@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'Marco'),
+        'name' => env('MAIL_FROM_NAME', 'test'),
     ],
 
     /*

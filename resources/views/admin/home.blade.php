@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto text-center mt-5">
-                <h2 class="my-2" style="color: #4EE0BC">This is your beautiful test app!</h2>
+                <h2 class="my-2" style="color: #076dbb">This is your beautiful test app!</h2>
 
                 <div style="border: 1px solid grey" class="p-2">
                     <p><strong> This app let's you change the color of the button below from green to red each time you
@@ -14,7 +14,17 @@
                     </button>
                 </div>
 
+                <button type="submit" class="btn mt-4" style="background-color: #4EE0BC; border-radius:10px 10px 10px 10px; width:100px; margin-left: 480px">
+                    <a style="color: black;" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        <strong>Go to login</strong> 
+                    </a>
+                    
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                 </button>
             </div>
+
         </div>
     </div>
 @endsection
