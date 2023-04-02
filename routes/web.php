@@ -33,6 +33,5 @@ Route::middleware('auth')
     ->prefix('admin') //localhost:8080/admin tutti gli url così
     ->name('admin.')
     ->group(function(){
-
-        // Route::get('/home', 'HomeController@index')->name('index');
+         Route::get('/home', 'HomeController@index')->name('index');
 });
