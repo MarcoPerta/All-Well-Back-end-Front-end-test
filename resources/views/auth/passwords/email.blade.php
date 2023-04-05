@@ -3,9 +3,14 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+        <div class="col-6-md-8 d-flex">
+            <img src="{{ asset('../../img/Type=Pagamenti.svg') }}" alt="logo" style="margin-right: 150px">
+
+            <div class="card mt-5" style="height: 400px;">
+                <h2 style="color: #076dbb" class="text-center">Reset your password</h2>
+                <div class="card-header"><strong>Have you forgot your password ? </strong> 
+                <p>Do not worry, insert here your email and we will send you a link to reset your password.</p>
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +19,7 @@
                         </div>
                     @endif
 
-                    <form method="POST" action="{{ route('password.email') }}">
+                    <form method="POST" action="{{ route('verify.email') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -33,8 +38,8 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Send Password Reset Link') }}
+                                <button type="submit" class="btn" style="background-color: #4EE0BC; border-radius:10px 10px 10px 10px; width:200px">
+                                    Reset your password
                                 </button>
                             </div>
                         </div>
